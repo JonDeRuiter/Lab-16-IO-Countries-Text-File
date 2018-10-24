@@ -19,31 +19,50 @@ namespace IO_Countries
         public void CountriesMenu()
         {
             int numSelect;
-            Console.WriteLine("Would you like to:\n 1. Display Country List\n 2. Enter a New Country\n 3. Delete a New Country \n 4. Exit Program");
-            numSelect = Validator.DigitInRange(Console.ReadLine(), 4);
-            MenuNav(numSelect);
+            bool menuAgain = true;
+                        
+            do
+            {
+                Console.WriteLine("Would you like to:\n 1. Display Country List\n 2. Enter a New Country\n 3. Delete a New Country \n 4. Exit Program");
+                numSelect = Validator.DigitInRange(Console.ReadLine(), 4);
+                menuAgain = MenuNav(numSelect);
+
+            } while (menuAgain);
 
         }
-        public void MenuNav(int x)
+        public bool MenuNav(int x)
         {
             string filePath = @"C:\Users\GC Student\Source\Repos\IO Countries\IO Countries\Countries List.txt";
 
             if (x == 1)
             {
-                string list = Countries_Text_IO.FileReader(filePath);
+                List<string> textFile = new List<string>();
+                textFile = Countries_Text_IO.FileReader(filePath);
+                foreach (string s in textFile)
+                {
+                    Console.WriteLine(s);
+                }
+                
+                Console.WriteLine();
+                return true;
             }
             else if (x == 2)
             {
-                string Stringy = Countries_Text_IO.FileWriter(filePath);
+                Countries_Text_IO.FileWriter(filePath);
+                return true;
             }
             else if (x == 3)
             {
-                //Deletes an entry
+                Countries_Text_IO.DeleteAName(filePath);
+                return true;
             }
             else
             {
                 Console.WriteLine("Goodbye!");
+                Console.ReadLine();
+                return false;
             }
         }
+
     }
 }

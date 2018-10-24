@@ -12,35 +12,12 @@ namespace IO_Countries
         static void Main(string[] args)
         {
             CountriesApp c = new CountriesApp();
-            Console.WriteLine("Here at Grand Circus we save Country names to files!");
-            do
-            {
-                c.CountriesMenu();
+            Console.WriteLine("Here at Grand Circus we edit Country names in files!");
+            c.CountriesMenu();
 
-            } while (Continue());
+            
 
         }
-        public static bool Continue()
-        {
-            bool run;
-            Console.WriteLine("Continue? y/n");
-            string answer = Console.ReadLine();
-            answer = answer.ToLower();
-
-            if (answer == "y")
-            {
-                run = true;
-            }
-            else if (answer == "n")
-            {
-                run = false;
-            }
-            else
-            {
-                Console.WriteLine("Sorry, I didn't understand that. Try again.");
-                run = Continue();
-            }
-            return run;
-        }
+        
     }
 }
