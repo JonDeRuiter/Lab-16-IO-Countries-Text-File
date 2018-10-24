@@ -1,0 +1,7 @@
+C:\Users\GC Student\Source\Repos\IO Countries\IO Countries\bin\Debug\IO Countries.exe.config
+C:\Users\GC Student\Source\Repos\IO Countries\IO Countries\bin\Debug\IO Countries.exe
+C:\Users\GC Student\Source\Repos\IO Countries\IO Countries\bin\Debug\IO Countries.pdb
+C:\Users\GC Student\Source\Repos\IO Countries\IO Countries\obj\Debug\IO Countries.csprojAssemblyReference.cache
+C:\Users\GC Student\Source\Repos\IO Countries\IO Countries\obj\Debug\IO Countries.csproj.CoreCompileInputs.cache
+C:\Users\GC Student\Source\Repos\IO Countries\IO Countries\obj\Debug\IO Countries.exe
+C:\Users\GC Student\Source\Repos\IO Countries\IO Countries\obj\Debug\IO Countries.pdb
